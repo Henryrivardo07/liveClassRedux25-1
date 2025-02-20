@@ -32,6 +32,7 @@ const ProductList: React.FC = () => {
 
   // **Fungsi untuk menangani penambahan produk ke keranjang**
   const handleAddToCart = (product: any) => {
+    dispatch(addToCart(product)); // Menambahkan produk ke keranjang
     console.log("Handling 'Add to Cart' action");
 
     // **Simpan action konfirmasi dalam ref**
