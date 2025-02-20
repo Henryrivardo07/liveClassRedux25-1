@@ -84,3 +84,8 @@ export const {
 } = cartSlice.actions;
 
 export default cartSlice.reducer;
+/*
+Bagaimana ini bekerja?
+Jika state.cart.items tidak berubah, hasil selectCartItemNamesMemoized akan diambil dari cache, bukan dihitung ulang.
+Mencegah re-render komponen yang tidak perlu.
+*/
