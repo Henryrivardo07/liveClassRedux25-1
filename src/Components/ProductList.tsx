@@ -95,22 +95,6 @@ const ProductList: React.FC = () => {
       ) : (
         <p className={styles.empty}>No products available</p>
       )}
-
-      {/* **Dialog konfirmasi saat menambahkan ke keranjang** */}
-      {dialogState.isOpen && confirmActionRef.current && (
-        <div className={styles.dialog}>
-          <div className={styles.dialogContent}>
-            <h2>{dialogState.title}</h2>
-            <p>{dialogState.message}</p>
-            <button onClick={confirmActionRef.current}>
-              {dialogState.primaryButtonTitle}
-            </button>
-            <button onClick={() => dispatch(closeDialog())}>
-              {dialogState.secondaryButtonTitle}
-            </button>
-          </div>
-        </div>
-      )}
     </div>
   );
 };
